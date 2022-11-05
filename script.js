@@ -1,8 +1,7 @@
 async function buscaEndereco() {
     let consultaCEP = await fetch('https://viacep.com.br/ws/01001000/json/')
-    
-    console.log(consultaCEP);
-    teste test
+    let consultaCEPConvertida = await consultaCEP.json()
+    console.log(consultaCEPConvertida);
     }
     
     buscaEndereco();
