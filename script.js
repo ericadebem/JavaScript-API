@@ -6,9 +6,11 @@ async function buscaEndereco(cep) {
       throw Error('CEP não existente!');
     }
     console.log(consultaCEPConvertida);
+    return consultaCEPConvertida;
  } catch(erro){
     console.log(erro)
    }
  } 
-    
-    buscaEndereco();
+
+let cep = document.getElementById('cep');
+cep.addEventListener("focusout", () => buscaEndereco(cep.value));
